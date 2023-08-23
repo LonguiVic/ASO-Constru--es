@@ -1,0 +1,252 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --white: #fff;
+    --black: #111;
+    --red: #930A0A;
+    --hardred: #FC0000;
+
+    --h1-font: 7rem;
+    --h2-font: 3.5rem;
+    --p-font: 2rem;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--black);
+    background: transparent;
+    background-size: cover;
+    background-position: inherit;
+}
+
+section {
+    padding: 120px 19% 100px;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+    background: transparent;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    color: var(--white);
+    font-size: var(--p-font);
+    font-weight: 400;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+
+.navlist a:hover {
+    color: var(--red);
+}
+
+#menu-icon {
+    font-size: 42px;
+    color: var(--black);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: var(--red);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 60rem;
+    margin-left: -24rem;
+}
+
+button a span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: var(--white);
+}
+
+button a span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover a span {
+    padding-right: 15px;
+}
+
+button:hover a span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.inicio {
+    min-height: 100vh;
+    background: url(/images/pagina_padrao_page-0001.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.sobre {
+    min-height: 90vh;
+
+}
+
+header.sticky {
+    padding: 1px 0%;
+    background: var(--white);
+    border-bottom: 1px solid var(--hardred);
+
+    .navlist a {
+        color: var(--black);
+    }
+
+    .navlist a:hover {
+        color: var(--red);
+    }
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, auto));
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+}
+
+.sobre-img {
+    width: 100%;
+    height: auto;
+}
+
+.sobre-text h2 {
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.sobre-text h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.sobre-text span {
+    color: var(--red);
+}
+
+.sobre-text p {
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 3rem;
+}
+
+.sobre-btn {
+    position: absolute;
+    right: 78rem;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: #18181a;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 15px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
+    cursor: pointer;
+    background: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.sobre-btn span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+}
+
+.sobre-btn span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+}
+
+.sobre-btn:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+}
+
+.sobre-btn:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+}
+
+.sobre-btn:hover span:last-child {
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
