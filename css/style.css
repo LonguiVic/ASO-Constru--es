@@ -53,7 +53,7 @@ header {
 }
 
 .logo img {
-    width: 100px;
+    width: 70px;
     height: auto;
     margin-left: 50px;
     margin-top: 5px;
@@ -71,10 +71,47 @@ header {
     transition: all ease .40s;
 }
 
+
+/* .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    width: 200px;
+    padding: 5px;
+    border: 1px solid var(--hardred);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--black);
+    font-size: var(--p-font);
+    font-weight: 400;
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: var(--accent-color);
+}
+ */
+/*
 .navlist a:hover {
     color: var(--red);
 }
-
+*/
 #menu-icon {
     font-size: 42px;
     color: var(--black);
@@ -96,8 +133,10 @@ button {
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
+    /*
     margin-top: 60rem;
     margin-left: -24rem;
+*/
 }
 
 button a span {
@@ -127,21 +166,54 @@ button:hover a span:after {
 }
 
 .inicio {
+    position: relative;
     min-height: 100vh;
-    background: url(/images/pagina_padrao_page-0001.jpg) no-repeat;
+    background: url(/images/capa_1280x720_pages-to-jpg-0001.jpg) no-repeat;
     background-size: cover;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: .5px solid var(--hardred);
+}
+
+.inicio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: -24.5rem;
+    margin-top: 13rem;
+}
+
+.inicio-content .inicio-text h2 {
+    font-size: 6rem;
+    margin: 0;
+}
+
+.inicio-content .inicio-text h2 span {
+    color: var(--red);
+}
+
+.inicio-content .inicio-text h4 {
+    font-size: 25px;
+    margin: 0;
+    color: var(--red);
+}
+
+.inicio-btn {
+    margin-top: 30rem;
 }
 
 .sobre {
-    min-height: 90vh;
+    min-height: 95vh;
 
 }
 
 header.sticky {
     padding: 1px 0%;
     background: var(--white);
-    border-bottom: 1px solid var(--hardred);
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
 
     .navlist a {
         color: var(--black);
@@ -150,14 +222,16 @@ header.sticky {
     .navlist a:hover {
         color: var(--red);
     }
+
 }
 
 .sobre {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
     gap: 4rem;
     position: relative;
+    border-bottom: .5px solid var(--hardred);
 }
 
 .sobre-img {
@@ -187,66 +261,26 @@ header.sticky {
     margin-bottom: 3rem;
 }
 
-.sobre-btn {
-    position: absolute;
-    right: 78rem;
-    overflow: hidden;
-    border: 1px solid #18181a;
-    color: #18181a;
+.btn {
     display: inline-block;
-    font-size: 15px;
-    line-height: 15px;
-    padding: 18px 18px 17px;
-    text-decoration: none;
-    cursor: pointer;
-    background: #fff;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    padding: 16px 45px;
+    background: var(--red);
+    color: var(--white);
+    font-size: var(--p-font);
+    border-radius: 3px;
+    font-weight: 600;
+    border: 2px solid var(--red);
+    transition: all ease .50s;
 }
 
-.sobre-btn span:first-child {
-    position: relative;
-    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-    z-index: 10;
+.btn:hover {
+    color: var(--black);
+    transform: translateX(5px);
+    background: transparent;
+    border: 2px solid var(--red);
 }
 
-.sobre-btn span:last-child {
-    color: white;
-    display: block;
-    position: absolute;
-    bottom: 0;
-    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-    z-index: 100;
-    opacity: 0;
-    top: 50%;
-    left: 50%;
-    transform: translateY(225%) translateX(-50%);
-    height: 14px;
-    line-height: 13px;
-}
-
-.sobre-btn:after {
-    content: "";
-    position: absolute;
-    bottom: -50%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    transform-origin: bottom center;
-    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-    transform: skewY(9.3deg) scaleY(0);
-    z-index: 50;
-}
-
-.sobre-btn:hover:after {
-    transform-origin: bottom center;
-    transform: skewY(9.3deg) scaleY(2);
-}
-
-.sobre-btn:hover span:last-child {
-    transform: translateX(-50%) translateY(-50%);
-    opacity: 1;
-    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+.servico {
+    min-height: 95vh;
+    background: var(--white);
 }
