@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A.S.O Construções</title>
 
-    <link rel="stylesheet" href="/css/style.css">
+<!-- Referência ao arquivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
@@ -146,8 +147,8 @@
 
 
 
-    <!--Js customs-->
-    <script src="/js/script.js"></script>
+    <!-- Referência ao arquivo JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 
