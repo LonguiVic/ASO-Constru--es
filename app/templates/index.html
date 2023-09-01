@@ -1,46 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A.S.O Construções</title>
-
-<!-- Referência ao arquivo CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
-
-    <!--Header section-->
-    <header>
-        <a href="#" class="logo"><img src="/images/Sem título-2.png" alt=""></a>
-        <div class="bx bx-menu" id="menu-icon"></div>
-
-        <ul class="navlist">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servico">Serviços</a></li>
-            <!-- <li class="dropdown">
-                <a href="#servico">Serviços</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Serviço 1</a></li>
-                    <li><a href="#">Serviço 2</a></li>
-                    <li><a href="#">Serviço 3</a></li>
-                </ul>
-            </li> -->
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </header>
-
+{% block conteudo %}
     <!--home section-->
     <section class="inicio" id="inicio">
         <div class="inicio-content">
@@ -57,7 +17,7 @@
     <!--about section-->
     <section class="sobre" id="sobre">
         <div class="sobre-img">
-            <img src="/images/sobre-novo" alt="">
+            <img src="{{ url_for('static', filename='images/sobre-novo') }}" alt="Imagem sobre a empresa">
         </div>
 
         <div class="sobre-text">
@@ -138,18 +98,7 @@
         </div>
     </section>
 
+{% endblock conteudo %}
 
 
 
-
-
-
-
-
-
-    <!-- Referência ao arquivo JS -->
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-
-</body>
-
-</html>

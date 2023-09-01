@@ -168,7 +168,7 @@ button:hover a span:after {
 .inicio {
     position: relative;
     min-height: 100vh;
-    background: url(/images/capa_1280x720_pages-to-jpg-0001.jpg) no-repeat;
+    background: url(../images/capa_1280x720_pages-to-jpg-0001.jpg) no-repeat;
     background-size: cover;
     width: 100%;
     display: flex;
