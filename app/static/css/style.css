@@ -393,3 +393,26 @@ header.sticky {
     border-radius: 5px;
     overflow: hidden;
 }
+
+.faq-container .tab input {
+    appearance: none;
+}
+
+.faq-container .tab label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-container .tab label::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+}
+
+.faq-container .tab:hover label::after {
+    color: var(--red);
+}
