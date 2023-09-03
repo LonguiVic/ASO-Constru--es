@@ -1,104 +1,131 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-    <!--home section-->
-    <section class="inicio" id="inicio">
-        <div class="inicio-content">
-            <div class="inicio-text">
-                <h2>A<span>.</span>S<span>.</span>O<span>.</span> Construções</h2>
-                <h4>Oliveira Construções e Serviços LTDA</h4>
-            </div>
-            <button class="inicio-btn">
-                <a href="#sobre"><span>Saiba mais</span></a>
-            </button>
+<!--home section-->
+<section class="inicio" id="inicio">
+    <div class="inicio-content">
+        <div class="inicio-text">
+            <h2>A<span>.</span>S<span>.</span>O<span>.</span> Construções</h2>
+            <h4>Oliveira Construções e Serviços LTDA</h4>
         </div>
-    </section>
+        <button class="inicio-btn">
+            <a href="#sobre"><span>Saiba mais</span></a>
+        </button>
+    </div>
+</section>
 
-    <!--about section-->
-    <section class="sobre" id="sobre">
-        <div class="sobre-img">
-            <img src="{{ url_for('static', filename='images/sobre-novo') }}" alt="Imagem sobre a empresa">
-        </div>
+<!--about section-->
+<section class="sobre" id="sobre">
+    <div class="sobre-img">
+        <img src="{{ url_for('static', filename='images/sobre-novo') }}" alt="Imagem sobre a empresa">
+    </div>
 
-        <div class="sobre-text">
-            <h2>Sobre Nós</h2>
-            <h5>Somos [adjetivo] [adjetivo] [adjetivo] <span>[adjetivo]</span> e <span>[adjetivo]</span></h5>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, nostrum fugit quod fuga dolore, minima
-                tenetur nemo officia atque, harum quasi ut reiciendis quo vitae. Placeat repellendus expedita quo culpa
-                rerum. At nulla velit magnam pariatur ut dolorum deserunt amet eum qui accusantium earum voluptate
-                repellat reprehenderit, necessitatibus placeat molestias temporibus praesentium quidem. Voluptatibus
-                dolorem nam, eveniet officia dolor quam, at debitis recusandae voluptates rem tempore tempora vitae iste
-                obcaecati est error fuga. Nam error consectetur aperiam earum minima. Dolore recusandae a minus tempora,
-                harum tempore quo quidem aliquid, atque pariatur magnam totam facere, nulla similique reiciendis soluta
-                ex. Est.</p>
-            <a href="#servico" class="btn">Nossos Serviços</a>
-        </div>
-    </section>
+    <div class="sobre-text">
+        <h2>Sobre Nós</h2>
+        <h5>Somos [adjetivo] [adjetivo] [adjetivo] <span>[adjetivo]</span> e <span>[adjetivo]</span></h5>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa, nostrum fugit quod fuga dolore, minima
+            tenetur nemo officia atque, harum quasi ut reiciendis quo vitae. Placeat repellendus expedita quo culpa
+            rerum. At nulla velit magnam pariatur ut dolorum deserunt amet eum qui accusantium earum voluptate
+            repellat reprehenderit, necessitatibus placeat molestias temporibus praesentium quidem. Voluptatibus
+            dolorem nam, eveniet officia dolor quam, at debitis recusandae voluptates rem tempore tempora vitae iste
+            obcaecati est error fuga. Nam error consectetur aperiam earum minima. Dolore recusandae a minus tempora,
+            harum tempore quo quidem aliquid, atque pariatur magnam totam facere, nulla similique reiciendis soluta
+            ex. Est.</p>
+        <a href="#servico" class="btn">Nossos Serviços</a>
+    </div>
+</section>
 
-    <!--Services section-->
-    <section class="servico" id="servico">
-        <div class="text-center">
-            <h2>Nossos Serviços</h2>
-            <h4>Soluções Sob Medida: Explore Nossos Serviços</h4>
-            <!-- <h4>Construindo Sonhos, Erguendo Realidades</h4>
+<!--Services section-->
+<section class="servico" id="servico">
+    <div class="text-center">
+        <h2>Nossos Serviços</h2>
+        <h4>Soluções Sob Medida: Explore Nossos Serviços</h4>
+        <!-- <h4>Construindo Sonhos, Erguendo Realidades</h4>
             <h4>Soluções Sob Medida: Explore Nossos Serviços</h4>
             <h4>Do Projeto à Realização: Nossos Serviços para o Setor Civil</h4> -->
+    </div>
+
+    <div class="servicos-items">
+        <div class="service-box">
+            <i class='bx bx-hard-hat'></i>
+            <h3>Nome do serviço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
+                consequuntur quasi magni nemo eligendi omnis!</p>
+            <a href="#" class="s-btnn">Detalhes</a>
         </div>
 
-        <div class="servicos-items">
-            <div class="service-box">
-                <i class='bx bx-hard-hat'></i>
-                <h3>Nome do serviço</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
-                    consequuntur quasi magni nemo eligendi omnis!</p>
-                <a href="#" class="s-btnn">Detalhes</a>
-            </div>
-
-            <div class="service-box">
-                <i class='bx bx-home'></i>
-                <h3>Nome do serviço</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
-                    consequuntur quasi magni nemo eligendi omnis!</p>
-                <a href="#" class="s-btnn">Detalhes</a>
-            </div>
-
-            <div class="service-box">
-                <i class='bx bx-building-house'></i>
-                <h3>Nome do serviço</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
-                    consequuntur quasi magni nemo eligendi omnis!</p>
-                <a href="#" class="s-btnn">Detalhes</a>
-            </div>
-
-            <div class="service-box">
-                <i class='bx bx-building-house'></i>
-                <h3>Nome do serviço</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
-                    consequuntur quasi magni nemo eligendi omnis!</p>
-                <a href="#" class="s-btnn">Detalhes</a>
-            </div>
-
-            <div class="service-box">
-                <i class='bx bx-building-house'></i>
-                <h3>Nome do serviço</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
-                    consequuntur quasi magni nemo eligendi omnis!</p>
-                <a href="#" class="s-btnn">Detalhes</a>
-            </div>
-
-            <div class="service-box">
-                <i class='bx bx-building-house'></i>
-                <h3>Nome do serviço</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
-                    consequuntur quasi magni nemo eligendi omnis!</p>
-                <a href="#" class="s-btnn">Detalhes</a>
-            </div>
-
-
+        <div class="service-box">
+            <i class='bx bx-home'></i>
+            <h3>Nome do serviço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
+                consequuntur quasi magni nemo eligendi omnis!</p>
+            <a href="#" class="s-btnn">Detalhes</a>
         </div>
-    </section>
+
+        <div class="service-box">
+            <i class='bx bx-building-house'></i>
+            <h3>Nome do serviço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
+                consequuntur quasi magni nemo eligendi omnis!</p>
+            <a href="#" class="s-btnn">Detalhes</a>
+        </div>
+
+        <div class="service-box">
+            <i class='bx bx-building-house'></i>
+            <h3>Nome do serviço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
+                consequuntur quasi magni nemo eligendi omnis!</p>
+            <a href="#" class="s-btnn">Detalhes</a>
+        </div>
+
+        <div class="service-box">
+            <i class='bx bx-building-house'></i>
+            <h3>Nome do serviço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
+                consequuntur quasi magni nemo eligendi omnis!</p>
+            <a href="#" class="s-btnn">Detalhes</a>
+        </div>
+
+        <div class="service-box">
+            <i class='bx bx-building-house'></i>
+            <h3>Nome do serviço</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id distinctio est dignissimos sapiente in
+                consequuntur quasi magni nemo eligendi omnis!</p>
+            <a href="#" class="s-btnn">Detalhes</a>
+        </div>
+
+
+    </div>
+</section>
+
+<!--FAQ section-->
+<section class="faq" id="faq">
+    <div class="faq-container">
+        <h1>Perguntas Frequentes (FAQ)</h1>
+        <div class="tab">
+            <input type="radio" name="acc" id="acc1">
+            <label for="acc1">
+                <h2>01</h2>
+                <h3>Lorem ipsum dolor sit.</h3>
+            </label>
+            <div class="faq-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque hic magni modi? Aperiam, quisquam!
+                    Nulla aut sequi inventore quam dignissimos.</p>
+            </div>
+        </div>
+        <div class="tab">
+            <input type="radio" name="acc" id="acc2">
+            <label for="acc2">
+                <h2>02</h2>
+                <h3>Lorem ipsum dolor sit.</h3>
+            </label>
+            <div class="faq-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque hic magni modi? Aperiam, quisquam!
+                    Nulla aut sequi inventore quam dignissimos.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 {% endblock conteudo %}
-
-
-

@@ -357,3 +357,8 @@ header.sticky {
     background: transparent;
     border: 2px solid var(--red);
 }
+
+.faq {
+    min-height: 95vh;
+    background: var(--white);
+}
