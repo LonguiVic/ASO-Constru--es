@@ -416,3 +416,70 @@ header.sticky {
 .faq-container .tab:hover label::after {
     color: var(--red);
 }
+
+.faq-container .tab input:checked~label::after {
+    transform: rotate(135deg);
+}
+
+.faq-container .tab label h2 {
+    width: 40px;
+    height: 40px;
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.faq-container .tab:nth-child(2) label h2 {
+    background: linear-gradient(135deg, #FC0000, #930A0A);
+}
+
+.faq-container .tab:nth-child(3) label h2 {
+    background: linear-gradient(135deg, #FC0000, #930A0A);
+}
+
+.faq-container .tab:nth-child(4) label h2 {
+    background: linear-gradient(135deg, #FC0000, #930A0A);
+}
+
+.faq-container .tab:nth-child(5) label h2 {
+    background: linear-gradient(135deg, #FC0000, #930A0A);
+}
+
+.faq-container .tab:nth-child(6) label h2 {
+    background: linear-gradient(135deg, #FC0000, #930A0A);
+}
+
+.faq-container .tab:nth-child(7) label h2 {
+    background: linear-gradient(135deg, #FC0000, #930A0A);
+}
+
+.faq-container .tab label h3 {
+    position: relative;
+    font-weight: 500;
+    color: var(--black);
+    z-index: 10;
+    font-size: 2rem;
+}
+
+.faq-container .tab .faq-content {
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.faq-container .tab input:checked~.faq-content {
+    max-height: 100vh;
+}
+
+.faq-container .tab .faq-content p {
+    position: relative;
+    padding: 10px 0;
+    color: var(--black);
+    z-index: 10;
+    font-size: 1.5rem;
+}
