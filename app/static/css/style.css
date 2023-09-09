@@ -404,6 +404,10 @@ header.sticky {
     cursor: pointer;
 }
 
+.faq-container .tab input[type="checkbox"] {
+    display: none;
+}
+
 .faq-container .tab label::after {
     content: '+';
     position: absolute;
@@ -468,12 +472,12 @@ header.sticky {
 
 .faq-container .tab .faq-content {
     max-height: 0;
-    transition: 1s;
+    transition: max-height 0.5s ease;
     overflow: hidden;
 }
 
 .faq-container .tab input:checked~.faq-content {
-    max-height: 100vh;
+    max-height: 1000px;
 }
 
 .faq-container .tab .faq-content p {
