@@ -612,6 +612,20 @@ textarea::placeholder {
     .sobre-img {
         margin-left: -10rem;
     }
+
+    .servico {
+        margin-left: -10rem;
+    }
+}
+
+@media (max-width:1300px) {
+    .servico {
+        margin-left: -15rem;
+    }
+
+    .faq {
+        margin-left: -10rem;
+    }
 }
 
 @media (max-width:1250px) {
@@ -633,6 +647,10 @@ textarea::placeholder {
         --h1-font: 5rem;
         --h2-font: 3.1rem;
         --p-font: 2rem;
+    }
+
+    .faq {
+        margin-left: -12rem;
     }
 }
 
@@ -660,9 +678,31 @@ textarea::placeholder {
         margin-left: 25rem;
     }
 
-    .servicos-items {
-        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    .servico {
+        margin-left: -23rem;
     }
 
+    .servicos-items {
+        grid-template-columns: 2fr;
+    }
 
+    .faq {
+        margin-left: -15rem;
+    }
+
+    .contato {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 870px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+        /* Altera para uma única coluna */
+    }
+
+    .map {
+        order: 2;
+        /* Coloca a div .map depois da div .form-container */
+    }
 }
