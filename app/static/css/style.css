@@ -366,6 +366,7 @@ header.sticky {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: .5px solid var(--hardred);
 }
 
 .faq-container {
@@ -402,10 +403,6 @@ header.sticky {
     display: flex;
     align-items: center;
     cursor: pointer;
-}
-
-.faq-container .tab input[type="checkbox"] {
-    display: none;
 }
 
 .faq-container .tab label::after {
@@ -472,12 +469,12 @@ header.sticky {
 
 .faq-container .tab .faq-content {
     max-height: 0;
-    transition: max-height 0.5s ease;
+    transition: 1s;
     overflow: hidden;
 }
 
 .faq-container .tab input:checked~.faq-content {
-    max-height: 1000px;
+    max-height: 100vh;
 }
 
 .faq-container .tab .faq-content p {
@@ -486,4 +483,186 @@ header.sticky {
     color: var(--black);
     z-index: 10;
     font-size: 1.5rem;
+}
+
+.contato {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--black);
+    background: var(--white);
+}
+
+.contato-container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    background: var(--ice);
+    box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-container h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--black);
+}
+
+.form-container h3 span {
+    color: var(--red);
+}
+
+.contact-form {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: .5px solid var(--red);
+    outline: none;
+    background: var(--white);
+    padding: 10px;
+    font-size: 1.5rem;
+    color: var(--black);
+    border-radius: 0.4rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 200px;
+}
+
+.contact-form .enviar-btn {
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: var(--red);
+    color: var(--white);
+    transition: all ease .50s;
+}
+
+.contact-form .enviar-btn:hover {
+    background: transparent;
+    border: 0.5px solid var(--red);
+    color: var(--black);
+    transition: 0.3s all linear;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--black);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Queries */
+@media (max-width:964px) {
+    .contato-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media (max-width:700px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 20rem !important;
+    }
+
+    .map iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width:1600px) {
+    header {
+        padding: 14px 4%;
+    }
+
+    header.sticky {
+        padding: 8px 4%;
+    }
+
+    section {
+        padding: 100px 5% 80px;
+        padding-left: 30rem;
+    }
+}
+
+@media (max-width:1450px) {
+    .sobre-img {
+        margin-left: -10rem;
+    }
+}
+
+@media (max-width:1250px) {
+    .sobre-img {
+        margin-left: -20rem;
+    }
+}
+
+@media (max-width:1200px) {
+    .inicio {
+        min-height: 90vh;
+    }
+
+    .navlist a {
+        margin: 0 20px;
+    }
+
+    :root {
+        --h1-font: 5rem;
+        --h2-font: 3.1rem;
+        --p-font: 2rem;
+    }
+}
+
+@media (max-width:1100px) {
+    .navlist a {
+        color: var(--red);
+    }
+}
+
+@media (max-width:1060px) {
+    .sobre {
+        grid-template-columns: 1fr;
+        margin-left: -15rem;
+    }
+
+    .sobre-img {
+        text-align: center;
+        order: 2;
+    }
+
+    .sobre-img img {
+        max-width: 100%;
+        width: 600px;
+        height: auto;
+        margin-left: 25rem;
+    }
+
+    .servicos-items {
+        grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    }
+
+
 }
