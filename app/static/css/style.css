@@ -656,7 +656,7 @@ textarea::placeholder {
 
 @media (max-width:1100px) {
     .navlist a {
-        color: var(--red);
+        color: var(--black);
     }
 }
 
@@ -696,6 +696,35 @@ textarea::placeholder {
 }
 
 @media (max-width: 870px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navlist {
+        position: absolute;
+        top: -800%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--ice);
+        padding: 20px 0;
+        text-align: left;
+        transition: all .50s ease;
+        border: 0.5px solid var(--red);
+    }
+
+    .navlist a {
+        display: block;
+        font-size: 22px;
+        padding: 12px 0;
+        color: var(--black);
+    }
+
+    .navlist.open {
+        top: 100%;
+    }
+
     .contato-container {
         grid-template-columns: 1fr;
         /* Altera para uma única coluna */
@@ -704,5 +733,17 @@ textarea::placeholder {
     .map {
         order: 2;
         /* Coloca a div .map depois da div .form-container */
+    }
+}
+
+@media (max-width: 660px) {
+    .inicio {
+        min-height: 80vh;
+    }
+
+    :root {
+        --h1-font: 4.5rem;
+        --h2-font: 2.8rem;
+        --p-font: 1.6rem;
     }
 }
